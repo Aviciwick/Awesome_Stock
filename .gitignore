@@ -1,0 +1,312 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# ============================================================================
+# Quantitative Trading Specific
+# ============================================================================
+
+# Data files
+*.csv
+*.xlsx
+*.xls
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.json
+*.parquet
+*.feather
+
+# But keep sample data
+!sample_data/
+!data/.gitkeep
+
+# Backtest results
+backtest_results/
+results/
+output/
+logs/
+*.log
+
+# Strategy cache
+cache/
+*.cache
+
+# Configuration files with sensitive data
+config.local.*
+secrets.*
+*.secret
+api_keys.*
+tokens.*
+
+# JQData / JoinQuant specific
+jqdata_cache/
+.joinquant/
+
+# Tushare data cache
+.tushare/
+
+# AKShare data cache
+.akshare/
+
+# ============================================================================
+# IDE and Editor
+# ============================================================================
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Keep essential VS Code settings
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.*.swp
+.*.swo
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ============================================================================
+# Operating System
+# ============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.directory
+
+# ============================================================================
+# Temporary and Backup Files
+# ============================================================================
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+
+# Compressed files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# ============================================================================
+# Project Specific
+# ============================================================================
+
+# Local development
+local_*.py
+test_*.py
+debug_*.py
+
+# Performance profiling
+*.prof
+*.lprof
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Model files (if using ML)
+models/
+*.model
+*.pkl
+*.h5
+*.onnx
+
+# Notebook outputs (keep notebooks, ignore outputs)
+*.ipynb_checkpoints/
+.ipynb_checkpoints/
+
+# ============================================================================
+# Keep Important Files
+# ============================================================================
+
+# Keep README
+!README.md
+!README*
+
+# Keep requirements
+!requirements.txt
+!requirements*.txt
+
+# Keep setup files
+!setup.py
+!setup.cfg
+!pyproject.toml
+
+# Keep license
+!LICENSE
+!LICENSE*
+
+# Keep contribution guidelines
+!CONTRIBUTING.md
+
+# Keep changelog
+!CHANGELOG.md
+!CHANGELOG*
