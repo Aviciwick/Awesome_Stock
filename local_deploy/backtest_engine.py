@@ -123,6 +123,16 @@ class Portfolio:
         self._commission_rate: float = 3e-4   # 0.03% 佣金
         self._stamp_tax: float = 1e-3         # 0.1% 印花税（卖出收取）
         self._min_commission: float = 5.0     # 最低佣金
+    
+    @property
+    def long_positions(self) -> Dict[str, Position]:
+        """返回所有多头持仓（与聚宽接口兼容）。"""
+        return self.positions
+    
+    @property
+    def short_positions(self) -> Dict[str, Position]:
+        """返回所有空头持仓（与聚宽接口兼容）。"""
+        return {}
 
     @property
     def positions_value(self) -> float:
