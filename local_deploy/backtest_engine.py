@@ -118,6 +118,8 @@ class Portfolio:
         self.locked_cash: float = 0.0
         self.positions: Dict[str, Position] = {}
         self.total_value: float = starting_cash
+        self.inout_cash: float = 0.0  # 累计出入金
+        self.transferable_cash: float = starting_cash  # 可取资金
         self._commission_rate: float = 3e-4   # 0.03% 佣金
         self._stamp_tax: float = 1e-3         # 0.1% 印花税（卖出收取）
         self._min_commission: float = 5.0     # 最低佣金
@@ -125,6 +127,13 @@ class Portfolio:
     @property
     def positions_value(self) -> float:
         return sum(p.value for p in self.positions.values())
+    
+    @property
+    def returns(self) -> float:
+        """累计收益率"""
+        if self.starting_cash == 0:
+            return 0.0
+        return (self.total_value - self.starting_cash) / self.starting_cash
 
     def refresh_total_value(self):
         self.total_value = self.available_cash + self.locked_cash + self.positions_value

@@ -138,7 +138,30 @@ def main():
         capital=args.capital,
     )
 
-    # 2. 加载策略模块
+    # 2. 加载策略模块前，创建 mock 模块以避免 jqdata 等依赖报错
+    import sys
+    import types
+    
+    # 创建 jqdata mock 模块
+    if 'jqdata' not in sys.modules:
+        jqdata = types.ModuleType('jqdata')
+        sys.modules['jqdata'] = jqdata
+    
+    # 创建 jqfactor mock 模块
+    if 'jqfactor' not in sys.modules:
+        jqfactor = types.ModuleType('jqfactor')
+        sys.modules['jqfactor'] = jqfactor
+    
+    # 创建 jqlib 及其子模块 mock
+    if 'jqlib' not in sys.modules:
+        jqlib = types.ModuleType('jqlib')
+        sys.modules['jqlib'] = jqlib
+        
+        # 创建 jqlib.technical_analysis
+        technical_analysis = types.ModuleType('jqlib.technical_analysis')
+        sys.modules['jqlib.technical_analysis'] = technical_analysis
+    
+    # 现在加载策略模块
     try:
         import importlib
         strategy_mod = importlib.import_module(args.strategy)
