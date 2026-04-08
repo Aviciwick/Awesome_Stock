@@ -19,8 +19,20 @@ import logging
 import warnings
 from typing import Dict, List, Optional, Union
 
+# 彻底禁用所有代理
+proxy_keys = [k for k in os.environ if 'proxy' in k.lower()]
+for key in proxy_keys:
+    del os.environ[key]
+
 import numpy as np
 import pandas as pd
+
+# 禁用 requests 的代理
+try:
+    import requests
+    requests.Session().trust_env = False
+except:
+    pass
 
 # 可选依赖：AKShare
 try:
